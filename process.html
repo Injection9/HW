@@ -1,13 +1,19 @@
 <html>
 <body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
-
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
 <script>
-encrypted="U2FsdGVkX1+AG/d+yPq46Zo5oISLmZSPgPDB8df1ACoy5k11ivCK+Jxp5EKEb3Xs4nnrBI6Q4kwCgmyFskukH6yFESrVRofVdlTmdadOY58x9QtoVowh/5Y6DRAVu5z2Eyp2I8JKZZKEKEeg4awv8DCr3EZP2c3Rpil0F0e3HJEv3xhUrGIFiikQl8U+0CR+V8PXvc4bSlUFKpYKg1GlLZlqe9H1zJw0vzt/CWVJEqgocXi7gVSHDy9nMO/MA7pHMD6MEEO56ZBjjt4sZQ0BMRUhnz09mPzYRwzqDP44REGRf1wdkBoDAkZuZbdT/Xux0Jq73lt83QsmJjMd5RrXbXqcNF1oUbjDiGXLvi6+kZwZGNqEB3ltww12Qbx28VnR5fLne18anQDVli4XduOoyXnCG8g7nNckk32+8hN5cs23MYVn0gBQrGJIsQyA7zSFOqEfo/Be++N6KtZLQKEd4bRWUGn0776kFTmjrKJ1j2Lmt/xoKrugzFp1xf0RkQ5p"
-passwd=window.location.href.split('#')[1]
-var decrypted = CryptoJS.AES.decrypt(encrypted, passwd);
-var sns=decrypted.toString(CryptoJS.enc.Utf8);
-document.write(sns);
+ var encrypted = "U2FsdGVkX1/xpU+nfMMdYpgBWBEUKQKqx70rRZY/C9iAmCTWV4sb2arWbFhsBm0cE3Ht79tKXCFQQrNtniWPp5bey3J8nIue8LBuXltVox0="
+//U2FsdGVkX18ZUVvShFSES21qHsQEqZXMxQ9zgHy+bu0=
+
+var decrypted = CryptoJS.AES.decrypt(encrypted, "Secret Passphrase");
+//4d657373616765
+
+
+//document.getElementById("demo1").innerHTML = encrypted;
+//document.getElementById("demo2").innerHTML = decrypted;
+  
+readable = decrypted.toString(CryptoJS.enc.Utf8);
+window.location.href=readable;
 </script>
 </body>
 </html>
