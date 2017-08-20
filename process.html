@@ -1,7 +1,11 @@
 <html>
 <body>
 <script>
+encrypted="U2FsdGVkX1+AG/d+yPq46Zo5oISLmZSPgPDB8df1ACoy5k11ivCK+Jxp5EKEb3Xs4nnrBI6Q4kwCgmyFskukH6yFESrVRofVdlTmdadOY58x9QtoVowh/5Y6DRAVu5z2Eyp2I8JKZZKEKEeg4awv8DCr3EZP2c3Rpil0F0e3HJEv3xhUrGIFiikQl8U+0CR+V8PXvc4bSlUFKpYKg1GlLZlqe9H1zJw0vzt/CWVJEqgocXi7gVSHDy9nMO/MA7pHMD6MEEO56ZBjjt4sZQ0BMRUhnz09mPzYRwzqDP44REGRf1wdkBoDAkZuZbdT/Xux0Jq73lt83QsmJjMd5RrXbXqcNF1oUbjDiGXLvi6+kZwZGNqEB3ltww12Qbx28VnR5fLne18anQDVli4XduOoyXnCG8g7nNckk32+8hN5cs23MYVn0gBQrGJIsQyA7zSFOqEfo/Be++N6KtZLQKEd4bRWUGn0776kFTmjrKJ1j2Lmt/xoKrugzFp1xf0RkQ5p"
+passwd=window.location.href.split('#')[1]
 var decrypted = CryptoJS.AES.decrypt(encrypted, passwd);
+var sns=decrypted.toString(CryptoJS.enc.Utf8);
+document.write(sns);
 </script>
 </body>
 </html>
